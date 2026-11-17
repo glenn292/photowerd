@@ -1,19 +1,24 @@
-/* ── How it works Section ── */
+/* ============================================================
+   LUMINA STUDIO - HOW IT WORKS SECTION
+   Grand Glass Pavilion, Radiant Step Pedestals & Starlight Grid
+   ============================================================ */
+
 .how-section {
   width: 100%;
-  background: linear-gradient(to bottom, #dc2626 50%, #991b1b 100%);
-  padding: 64px 24px 72px;
+  background: 
+    radial-gradient(ellipse 90% 60% at 50% 15%, rgba(99, 102, 241, 0.16) 0%, rgba(11, 14, 29, 0.95) 60%, var(--bg-dark, #070913) 100%);
+  padding: 80px 24px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
   box-sizing: border-box;
   position: relative;
   overflow: visible;
 }
 
-/* ── Top Curve Divider (Cekung ke atas) ── */
+/* Curve Top Seamless Blend */
 .how-curve-top {
   position: absolute;
   top: 0;
@@ -24,6 +29,7 @@
   line-height: 0;
   pointer-events: none;
   z-index: 1;
+  opacity: 0.05;
 }
 
 .how-curve-svg {
@@ -32,72 +38,35 @@
   display: block;
 }
 
-/* ── Pixel Pattern Background ── */
+.how-curve-svg path {
+  fill: var(--bg-dark, #070913);
+}
+
+/* Starlight Matrix Pattern Background */
 .how-pixel-pattern {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background-image:
-    /* Pixel Grid 18px */
-    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    /* Pixel Checkerboard Squares */
-    linear-gradient(45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.12) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.12) 75%);
-  background-size:
-    18px 18px,
-    18px 18px,
-    18px 18px,
-    18px 18px,
-    18px 18px,
-    18px 18px;
-  background-position:
-    0 0,
-    0 0,
-    0 0,
-    0 9px,
-    9px -9px,
-    -9px 0px;
-  opacity: 0.25;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  opacity: 0.35;
 }
 
-/* ── Decorative Pixel Stars / Sparkles ── */
-.how-pixel-sparkles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-@keyframes pixelTwinkle {
-  0% {
-    opacity: 0.2;
-    transform: scale(0.85);
-  }
-  100% {
-    opacity: 0.6;
-    transform: scale(1.15);
-  }
-}
-
-/* ── Decorative Photostrip Overlay (howover.png) ── */
+/* Decorative Photostrip Overlay with Depth Shadow */
 .how-overlay {
   position: absolute;
-  top: 100%;
-  left: max(-5px, calc(50% - 1200px));
-  transform: translateY(-50%) rotate(7deg);
-  width: clamp(270px, 30vw, 280px);
-  z-index: 3;
+  top: 85%;
+  left: max(-10px, calc(50% - 1180px));
+  transform: translateY(-50%) rotate(6deg);
+  width: clamp(240px, 26vw, 290px);
+  z-index: 4;
   pointer-events: none;
-  filter: drop-shadow(0 7px 5px rgba(0, 0, 0, 0.2));
-  opacity: 1;
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease;
+  filter: 
+    drop-shadow(0 25px 40px rgba(0, 0, 0, 0.75))
+    drop-shadow(0 0 25px rgba(99, 102, 241, 0.3));
+  opacity: 0.92;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .how-overlay-img {
@@ -106,16 +75,22 @@
   display: block;
 }
 
-/* ── Main Outer White Card Container ── */
+/* ── Main Outer Glass Pavilion Container ── */
 .how-wrapper-card {
   width: 100%;
-  max-width: 1140px;
-  background-color: #fafbfb;
-  padding: 56px 44px 52px;
-  margin-top: 60px;
-  margin-bottom: 45px;
-  box-shadow: 0 4px 25px rgba(230, 180, 195, 0.14);
-  border: 1px solid rgba(240, 220, 228, 0.65);
+  max-width: 1200px;
+  background: rgba(14, 19, 41, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  padding: 68px 52px 64px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 
+    0 35px 80px -15px rgba(0, 0, 0, 0.75),
+    0 0 50px rgba(99, 102, 241, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -124,107 +99,136 @@
 /* ── Header ── */
 .how-header {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 54px;
 }
 
 .how-overline {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #dc2626;
-  margin-bottom: 8px;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 5px 18px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
 }
 
 .how-main-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(2.1rem, 3.8vw, 2.75rem);
-  font-weight: 600;
-  color: #1e293b;
-  letter-spacing: -0.02em;
-  margin: 4px 0 14px;
-  line-height: 1.2;
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+  line-height: 1.18;
 }
 
 .how-subtitle {
-  font-family: "Montserrat", sans-serif;
-  font-size: 20x;
-  color: #1e293b;
+  font-size: 16px;
+  color: var(--text-soft, #cbd5e1);
   font-weight: 400;
-  max-width: 580px;
+  max-width: 620px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* ── 4 Steps Grid ── */
 .how-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 44px;
+  gap: 22px;
+  margin-bottom: 52px;
 }
 
 /* ── Individual Step Card ── */
 .how-step-card {
-  background-color: #ffffff;
-  border: 1px solid #dc2626;
-  border-radius: 0px;
-  padding: 34px 18px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 38px 22px 34px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  transition:
-    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Icon Circle */
+.how-step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+}
+
+.how-step-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(129, 140, 248, 0.45);
+  box-shadow: 
+    0 24px 50px -10px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(99, 102, 241, 0.3);
+}
+
+/* Icon Sphere / Pedestal */
 .how-icon-circle {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background-color: #dc2626;
-  color: #fafbfb;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   flex-shrink: 0;
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.45);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Step Label (e.g. STEP 1) */
+.how-step-card:hover .how-icon-circle {
+  transform: scale(1.12) rotate(6deg);
+}
+
+/* Step Label */
 .how-step-label {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #dc2626;
-  margin-bottom: 8px;
+  color: #818cf8;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 /* Card Title */
 .how-card-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16.5px;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 8px;
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
   line-height: 1.3;
 }
 
 /* Card Description */
 .how-card-desc {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 400;
-  color: #6b7280;
-  line-height: 1.55;
+  color: var(--text-muted, #94a3b8);
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -238,28 +242,38 @@
 .how-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: #fafbfb;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  justify-content: center;
+  gap: 12px;
+  
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  background: #dc2626;
-  border: 1px solid #dc2626;
-  padding: 12px 28px;
-  border-radius: 0;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
+  
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  padding: 16px 42px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  
+  box-shadow: 
+    0 12px 30px -4px rgba(99, 102, 241, 0.6),
+    0 0 25px rgba(236, 72, 153, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .how-cta-btn:hover {
-  background: #b91c1c;
-  border-color: #b91c1c;
-  color: #fafbfb;
+  transform: translateY(-3px) scale(1.02);
+  color: #ffffff !important;
+  box-shadow: 
+    0 18px 45px -4px rgba(99, 102, 241, 0.75),
+    0 0 35px rgba(236, 72, 153, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .how-btn-camera-icon {
@@ -267,65 +281,53 @@
 }
 
 /* ── Responsive Queries ── */
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .how-overlay {
-    right: 8px;
-    width: 150px;
-    opacity: 0.85;
+    display: none;
   }
 }
 
 @media (max-width: 1024px) {
-  .how-overlay {
-    display: none;
-  }
-
   .how-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .how-wrapper-card {
-    padding: 44px 30px 42px;
+    padding: 50px 36px 46px;
   }
 }
 
 @media (max-width: 640px) {
   .how-section {
-    padding: 40px 16px 50px;
-  }
-
-  .how-curve-top {
-    height: 35px;
+    padding: 60px 16px 70px;
   }
 
   .how-wrapper-card {
-    padding: 34px 18px 36px;
-    border-radius: 24px;
-    margin-top: 10px;
+    padding: 38px 20px 36px;
+    border-radius: 28px;
   }
 
   .how-main-title {
-    font-size: 1.85rem;
+    font-size: 1.9rem;
   }
 
   .how-subtitle {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .how-cards-grid {
     grid-template-columns: 1fr;
     gap: 16px;
-    margin-bottom: 36px;
+    margin-bottom: 38px;
   }
 
   .how-step-card {
-    padding: 26px 16px 24px;
+    padding: 30px 18px 26px;
   }
 
   .how-cta-btn {
     width: 100%;
     max-width: 280px;
-    padding: 13px 24px;
   }
 }

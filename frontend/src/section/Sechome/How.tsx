@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./How.css";
 import { LayoutGrid, Camera, SlidersHorizontal, Download } from "lucide-react";
-import howover from "../../assets/howover.png";
 
 interface StepItem {
   id: number;
@@ -16,33 +15,33 @@ const steps: StepItem[] = [
   {
     id: 1,
     stepNumber: "STEP 1",
-    title: "Choose a layout",
+    title: "Pilih Template & Layout",
     description:
-      "Pick from strips, filters, and special collabs. There's a lot to choose from.",
+      "Pilih dari beragam koleksi frame klasik, Polaroid, 4-cut Korea, hingga nuansa pastel dan Y2K.",
     icon: <LayoutGrid size={22} strokeWidth={2} />,
   },
   {
     id: 2,
     stepNumber: "STEP 2",
-    title: "Strike a pose",
+    title: "Berekspresi di Kamera",
     description:
-      "Allow camera access and pose for each shot with a 3-second countdown.",
+      "Aktifkan kamera web dan tampilkan pose terbaikmu dipandu hitungan mundur 3 detik otomatis.",
     icon: <Camera size={22} strokeWidth={2} />,
   },
   {
     id: 3,
     stepNumber: "STEP 3",
-    title: "Customize",
+    title: "Kustomisasi Sesukamu",
     description:
-      "Adjust frame colors, add stickers, doodle, or overlay the date. Make it yours.",
+      "Atur pencahayaan bebas, pasang filter warna estetik, dan hias dengan stiker ekspresif yang bisa digeser.",
     icon: <SlidersHorizontal size={22} strokeWidth={2} />,
   },
   {
     id: 4,
     stepNumber: "STEP 4",
-    title: "Download",
+    title: "Unduh Strip HD Instan",
     description:
-      "Save your high-resolution strip instantly. Nothing is ever uploaded or stored.",
+      "Simpan photostrip jernih kualitas tinggi langsung ke galerimu. Tanpa diunggah, 100% aman dan privat.",
     icon: <Download size={22} strokeWidth={2} />,
   },
 ];
@@ -50,7 +49,7 @@ const steps: StepItem[] = [
 export default function How() {
   return (
     <section className="how-section">
-      {/* Curved top divider (cekung ke atas) */}
+      {/* Curved top divider */}
       <div className="how-curve-top" aria-hidden="true">
         <svg
           viewBox="0 0 1440 60"
@@ -58,26 +57,22 @@ export default function How() {
           preserveAspectRatio="none"
           className="how-curve-svg"
         >
-          <path d="M0,0 C480,50 960,50 1440,0 L1440,0 L0,0 Z" fill="#fafbfb" />
+          <path d="M0,0 C480,50 960,50 1440,0 L1440,0 L0,0 Z" fill="#070913" />
         </svg>
       </div>
 
       {/* Pixel Pattern Background */}
       <div className="how-pixel-pattern" aria-hidden="true" />
 
-      {/* Decorative Photostrip Overlay */}
-      <div className="how-overlay" aria-hidden="true">
-        <img src={howover} alt="Overlay" className="how-overlay-img" />
-      </div>
-
       <div className="how-wrapper-card">
         {/* Header */}
         <div className="how-header">
-          <span className="how-overline">Bingung?</span>
-          <h2 className="how-main-title">Begini Cara Kerjanya</h2>
+          <span className="how-overline">Simple & Expressive</span>
+          <h2 className="how-main-title">Cara Kerja Photowerd</h2>
           <p className="how-subtitle fw-medium">
-            Tanpa perlu mengunduh aplikasi atau membuat akun. Cukup ikuti empat
-            langkah mudah untuk mendapatkan hasil photostrip-mu
+            Tanpa perlu unduh aplikasi atau mendaftar akun. Cukup ikuti empat
+            langkah mudah untuk menciptakan photostrip kreatif ala studio
+            digital.
           </p>
         </div>
 
@@ -96,7 +91,7 @@ export default function How() {
         {/* CTA Button */}
         <div className="how-cta-container">
           <Link to="/Photobooth" className="how-cta-btn">
-            Kuy Foto!
+            Mulai Berkreasi Sekarang
           </Link>
         </div>
       </div>

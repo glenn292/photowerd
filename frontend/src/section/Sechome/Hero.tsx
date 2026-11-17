@@ -29,18 +29,25 @@ export default function Hero() {
         />
       ))}
       <div className="hero-scroll">
-        <span>Scroll kebawah</span>
+        <span>Scroll Down</span>
         <div className="scroll-line"></div>
       </div>
       <div className="hero-overlay" />
       <div className="hero-content">
+        <span className="hero-tagline-badge anim-up">
+          ✦ Capture. Create. Remember.
+        </span>
         <h1 className="hero-title anim-up delay-1">
-          Abadikan Kenanganmu
+          Your Moments,
           <br />
-          di Justfoto.id
+          Your Creative Story.
         </h1>
-        <Link to="/Photobooth" className="hero-btn anim-up delay-2">
-          Yuk coba sekarang! <span className="hero-btn-arrow">→</span>
+        <p className="hero-subtitle anim-up delay-2">
+          Turn every moment into something unforgettable. Capture, customize,
+          and create your own photo memories with Photowerd.
+        </p>
+        <Link to="/Photobooth" className="hero-btn anim-up delay-3">
+          Start Creating <span className="hero-btn-arrow">→</span>
         </Link>
       </div>
     </section>

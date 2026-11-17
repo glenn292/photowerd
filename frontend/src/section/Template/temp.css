@@ -1,14 +1,19 @@
-/* ── Template List Section (temp.tsx) ── */
+/* ============================================================
+   LUMINA STUDIO - TEMPLATE CATALOGUE
+   Floating Frosted Cards, Starlight Geometry & Radiant Filter Pills
+   ============================================================ */
+
 .temp-section {
   width: 100%;
-  padding: 72px 24px 90px;
-  background-color: #fafbfb;
-  font-family: "Montserrat", sans-serif;
+  padding: 80px 24px 110px;
+  background-color: var(--bg-dark, #070913);
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
 }
 
+/* Background Atmosphere */
 .temp-bg-shapes {
   position: absolute;
   inset: 0;
@@ -17,159 +22,108 @@
   z-index: 0;
 }
 
-/* ── Abstract Shapes ── */
+/* Ambient Glass Rings & Geometric Accents */
 .temp-shape {
   position: absolute;
   display: block;
-  border: 1px solid rgba(220, 38, 38, 0.16);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 50%;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.08);
+  pointer-events: none;
 }
 
 .temp-shape-1 {
-  width: 140px;
-  height: 140px;
-  top: 8%;
-  left: -45px;
+  width: 180px;
+  height: 180px;
+  top: 6%;
+  left: -50px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
 }
 
 .temp-shape-2 {
-  width: 90px;
-  height: 90px;
-  bottom: 12%;
-  right: -25px;
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  right: -30px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
 }
 
 .temp-shape-3 {
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
   top: 35%;
-  right: 12%;
-  border-radius: 12px;
+  right: 10%;
+  border-radius: 18px;
   transform: rotate(25deg);
+  border-color: rgba(236, 72, 153, 0.25);
 }
 
 .temp-shape-4 {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   bottom: 25%;
-  left: 8%;
-  border-radius: 18px;
+  left: 6%;
+  border-radius: 24px;
   transform: rotate(35deg);
+  border-color: rgba(129, 140, 248, 0.2);
 }
 
 .temp-shape-5 {
-  width: 110px;
-  height: 110px;
-  top: -45px;
-  right: 30%;
+  width: 130px;
+  height: 130px;
+  top: -40px;
+  right: 28%;
   border-style: dashed;
+  border-color: rgba(99, 102, 241, 0.15);
 }
 
 .temp-shape-6 {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   bottom: 8%;
-  right: 30%;
-  border-radius: 8px;
+  right: 28%;
+  border-radius: 12px;
   transform: rotate(45deg);
 }
 
-/* ── Stars ── */
+/* Glowing Starlight Crosses */
 .temp-star {
   position: absolute;
-  color: rgba(220, 38, 38, 0.3);
-  font-size: 28px;
-}
-
-.temp-star-1 {
-  top: 12%;
-  left: 20%;
-  font-size: 25px;
-}
-
-.temp-star-2 {
-  top: 22%;
-  right: 18%;
-  font-size: 32px;
-}
-
-.temp-star-3 {
-  bottom: 18%;
-  left: 25%;
-  font-size: 22px;
-}
-
-.temp-star-4 {
-  bottom: 30%;
-  right: 8%;
-  font-size: 36px;
-}
-
-.temp-star-5 {
-  top: 55%;
-  left: 5%;
-  font-size: 18px;
-}
-
-.temp-star-6 {
-  top: 8%;
-  right: 45%;
-  font-size: 20px;
-}
-
-.temp-star-7 {
-  bottom: 8%;
-  left: 48%;
+  color: rgba(165, 180, 252, 0.45);
   font-size: 26px;
+  text-shadow: 0 0 14px rgba(99, 102, 241, 0.45);
+  animation: floatGentle 5s ease-in-out infinite alternate;
 }
 
-.temp-star-8 {
-  top: 65%;
-  right: 35%;
-  font-size: 18px;
-}
+.temp-star-1 { top: 12%; left: 20%; font-size: 24px; }
+.temp-star-2 { top: 20%; right: 16%; font-size: 30px; animation-delay: 1s; }
+.temp-star-3 { bottom: 18%; left: 25%; font-size: 22px; animation-delay: 2s; }
+.temp-star-4 { bottom: 28%; right: 8%; font-size: 32px; }
+.temp-star-5 { top: 55%; left: 5%; font-size: 18px; }
+.temp-star-6 { top: 8%; right: 45%; font-size: 20px; }
+.temp-star-7 { bottom: 8%; left: 48%; font-size: 24px; }
+.temp-star-8 { top: 65%; right: 35%; font-size: 18px; }
 
-/* ── Small Dots ── */
+/* Glowing Dots */
 .temp-dot {
   position: absolute;
-  width: 7px;
-  height: 7px;
-  background-color: rgba(220, 38, 38, 0.3);
+  width: 6px;
+  height: 6px;
+  background-color: rgba(129, 140, 248, 0.5);
   border-radius: 50%;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
 }
 
-.temp-dot-1 {
-  top: 18%;
-  left: 42%;
-}
+.temp-dot-1 { top: 18%; left: 42%; }
+.temp-dot-2 { top: 45%; right: 25%; }
+.temp-dot-3 { bottom: 20%; right: 45%; }
+.temp-dot-4 { bottom: 40%; left: 18%; }
+.temp-dot-5 { top: 75%; right: 12%; }
+.temp-dot-6 { top: 30%; left: 8%; }
 
-.temp-dot-2 {
-  top: 45%;
-  right: 25%;
-}
-
-.temp-dot-3 {
-  bottom: 20%;
-  right: 45%;
-}
-
-.temp-dot-4 {
-  bottom: 40%;
-  left: 18%;
-}
-
-.temp-dot-5 {
-  top: 75%;
-  right: 12%;
-}
-
-.temp-dot-6 {
-  top: 30%;
-  left: 8%;
-}
-
+/* ── Container ── */
 .temp-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -177,138 +131,164 @@
 
 /* ── Header ── */
 .temp-header {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .temp-title-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .temp-accent-bar {
   display: inline-block;
-  width: 38px;
+  width: 44px;
   height: 4px;
-  background-color: #dc2626;
-  border-radius: 2px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  border-radius: 9999px;
   margin-top: 18px;
   flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.6);
 }
 
 .temp-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.8rem, 2.9vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.24;
-  letter-spacing: -0.01em;
-  margin: 0 0 8px;
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
 }
 
 .title-red {
-  color: #dc2626;
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-dark {
-  color: #1e293b;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 60%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .temp-subtitle {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #555e6d;
+  font-size: 15.5px;
+  font-weight: 400;
+  color: var(--text-soft, #cbd5e1);
   line-height: 1.6;
   margin: 0;
 }
 
-/* ── Category Pills ── */
+/* ── Category Filter Pills ── */
 .temp-cats {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 24px;
 }
 
 .temp-cat-pill {
-  display: inline-block;
-  padding: 5px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
   border-radius: 9999px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  background-color: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
 }
 
 .temp-cat-pill:hover {
-  background-color: #fef2f2;
-  color: #dc2626;
-  border-color: rgba(220, 38, 38, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .temp-cat-pill--active {
-  background-color: #dc2626 !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%) !important;
   color: #ffffff !important;
-  border-color: #dc2626 !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.45);
+  font-weight: 700;
+  transform: translateY(0);
 }
 
-/* ── Empty state ── */
+/* ── Empty State ── */
 .temp-empty {
   grid-column: 1 / -1;
   text-align: center;
-  color: #9ca3af;
-  font-size: 15px;
+  color: #94a3b8;
+  font-size: 16px;
   font-weight: 500;
-  padding: 48px 0;
+  padding: 60px 0;
 }
 
 /* ── Grid ── */
 .temp-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-bottom: 52px;
+  gap: 24px;
+  margin-bottom: 56px;
 }
 
 /* ── Individual Card ── */
 .temp-card {
-  background-color: #ffffff;
-  border: 1px solid #e9eef4;
+  background: rgba(14, 19, 41, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-/* ── Frame Preview (mini photostrip) ── */
+.temp-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(20, 28, 58, 0.82);
+  border-color: rgba(129, 140, 248, 0.45);
+  box-shadow: 
+    0 24px 50px -10px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(99, 102, 241, 0.3);
+}
+
+/* ── Frame Preview (Mini Photostrip) ── */
 .temp-preview {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.5;
+  aspect-ratio: 1 / 1.45;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 14px 20px;
+  gap: 7px;
+  padding: 16px 22px;
   overflow: hidden;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .temp-preview-slot {
   width: 100%;
   flex: 1;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1.5px solid;
-  opacity: 0.85;
-  background: rgba(255, 255, 255, 0.18);
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .temp-preview-accent {
@@ -324,14 +304,15 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 3px 8px;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
   border-radius: 9999px;
   line-height: 1.4;
   pointer-events: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .temp-preview-dot {
@@ -341,107 +322,115 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.6;
   pointer-events: none;
 }
 
 /* ── Card Info ── */
 .temp-card-info {
-  padding: 14px 16px 4px;
+  padding: 18px 20px 6px;
   flex: 1;
 }
 
 .temp-card-name {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14.5px;
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: 15.5px;
   font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 5px;
+  color: #ffffff;
+  margin: 0 0 6px;
   line-height: 1.3;
 }
 
 .temp-card-desc {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 400;
-  color: #6b7280;
+  color: var(--text-muted, #94a3b8);
   line-height: 1.5;
   margin: 0;
 }
 
-/* ── Card CTA button ── */
+/* ── Card CTA Button ── */
 .temp-card-btn {
   display: block;
-  margin: 12px 16px 16px;
-  padding: 12px 14px;
-  background-color: #dc2626;
-  color: #fafbfb;
-  font-family: "Montserrat", sans-serif;
+  margin: 14px 18px 18px;
+  padding: 12px 18px;
+  background: rgba(99, 102, 241, 0.14);
+  color: #c7d2fe;
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
-  letter-spacing: 0.03em;
-
-  /* Tambahkan ini */
-  border: 1px solid transparent;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid rgba(99, 102, 241, 0.35);
   box-sizing: border-box;
-
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .temp-card-btn:hover {
-  background-color: #fafbfb;
-  color: #dc2626;
-  border: 1px solid #dc2626;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
 }
 
-/* ── Bottom CTA (matches Template.css .template-btn) ── */
+/* ── Bottom CTA ── */
 .temp-cta {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
-.template-btn {
+/* Reuse template-btn from index/template rules */
+.temp-section .template-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: #fafbfb;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  background: #dc2626;
-  border: 1px solid #dc2626;
-  padding: 12px 28px;
-  border-radius: 0;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  padding: 16px 42px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 12px 30px -4px rgba(99, 102, 241, 0.6),
+    0 0 25px rgba(236, 72, 153, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
-.template-btn:hover {
-  background: #b91c1c;
-  border-color: #b91c1c;
-  color: #fafbfb;
+.temp-section .template-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #ffffff !important;
+  box-shadow: 
+    0 18px 45px -4px rgba(99, 102, 241, 0.75),
+    0 0 35px rgba(236, 72, 153, 0.5);
 }
 
-/* ── Responsive ── */
+/* =========================================
+   RESPONSIVE CATALOGUE
+========================================= */
+
 @media (max-width: 1024px) {
   .temp-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .temp-section {
-    padding: 52px 18px 72px;
+    padding: 60px 18px 80px;
   }
 
   .temp-grid {
@@ -455,22 +444,27 @@
   }
 
   .temp-accent-bar {
-    width: 30px;
+    width: 32px;
     margin-top: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .temp-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .temp-card-name {
-    font-size: 13px;
+    font-size: 15px;
   }
 
-  .temp-card-desc {
-    display: none;
+  .temp-cats {
+    gap: 6px;
+  }
+
+  .temp-cat-pill {
+    padding: 6px 14px;
+    font-size: 12px;
   }
 }

@@ -16,14 +16,14 @@ export default function Template() {
             <div className="template-image-card">
               <img
                 src={kolase1jadi}
-                alt="Kolase Foto 1"
+                alt="Photowerd Strip Sample 1"
                 className="template-img"
               />
             </div>
             <div className="template-image-card">
               <img
                 src={kolase2jadi}
-                alt="Kolase Foto 2"
+                alt="Photowerd Strip Sample 2"
                 className="template-img"
               />
             </div>
@@ -34,40 +34,41 @@ export default function Template() {
         <div className="template-content-col">
           <div className="template-title-wrapper">
             <h2 className="template-title">
-              <span className="title-blue"> Temukan Berbagai</span>
+              <span className="title-blue">Explore Endless</span>
               <br />
-              <span className="title-green">Bingkai Foto Kesukaan mu</span>
+              <span className="title-green">Creative Photo Frames</span>
               <br />
             </h2>
           </div>
 
           <div className="template-body">
             <p className="template-desc-primary">
-              Justfoto.id menyediakan lebih dari 100 pilihan bingkai foto dengan
-              beragam desain dan gaya yang dapat disesuaikan untuk mengabadikan
-              setiap momen berharga dirimu (GRATIS).
+              Photowerd menghadirkan lebih dari 100 pilihan bingkai foto estetik
+              dengan ragam gaya visual modern — dari klise analog 35mm, gaya
+              4-cut minimalis Korea, hingga sentuhan Cyber Y2K. Bebas berkreasi
+              dan abadikan setiap ekspresimu secara instan.
             </p>
 
             <div className="template-stats">
               <div className="template-stat-item">
                 <span className="stat-number">100+</span>
-                <span className="stat-label fw-medium">Pilihan Bingkai</span>
+                <span className="stat-label fw-medium">Desain Bingkai</span>
               </div>
 
               <div className="template-stat-item">
                 <span className="stat-number">24/7</span>
-                <span className="stat-label fw-medium">Akses Layanan</span>
+                <span className="stat-label fw-medium">Akses Studio Web</span>
               </div>
 
               <div className="template-stat-item">
                 <span className="stat-number">HD</span>
-                <span className="stat-label fw-medium">Kualitas Foto</span>
+                <span className="stat-label fw-medium">Kualitas Resolusi</span>
               </div>
             </div>
 
             <div className="template-action">
               <Link to="/tentang" className="template-btn">
-                Cek Selengkapnya
+                Jelajahi Semua Template
               </Link>
             </div>
           </div>

@@ -29,8 +29,15 @@ export default function Navbar() {
       }`}
     >
       <div className="container">
-        {/* Desktop Navigation */}
-        <div className="navbar-nav ms-auto navbar-desktop">
+        {/* Brand & Desktop Navigation */}
+        <div className="navbar-nav navbar-desktop">
+          <Link to="/" className="navbar-brand-pill">
+            <span className="brand-dot"></span>
+            Photowerd
+          </Link>
+
+          <div className="nav-divider"></div>
+
           <Link to="/" className={`nav-link ${path === "/" ? "active" : ""}`}>
             Beranda
           </Link>

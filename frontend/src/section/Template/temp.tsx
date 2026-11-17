@@ -285,12 +285,13 @@ export default function TemplateList() {
             <span className="temp-accent-bar" />
             <div>
               <h2 className="temp-title">
-                <span className="title-red">Pilih</span>{" "}
-                <span className="title-dark">Template</span>
+                <span className="title-red">Koleksi Frame</span>{" "}
+                <span className="title-dark">Photowerd</span>
               </h2>
               <p className="temp-subtitle">
-                {filtered.length} template tersedia — dari klasik, film, Korea,
-                hingga Y2K. Langsung coba di photobooth!
+                {filtered.length} desain template estetik siap pakai — dari gaya
+                klise film analog, 4-cut Korea, hingga Cyber Y2K. Pilih bingkai
+                favoritmu dan mulai berkreasi!
               </p>
             </div>
           </div>
@@ -312,7 +313,10 @@ export default function TemplateList() {
         {/* Grid */}
         <div className="temp-grid">
           {filtered.length === 0 ? (
-            <p className="temp-empty">Tidak ada template di kategori ini.</p>
+            <p className="temp-empty">
+              Belum ada template pada kategori ini. Silakan pilih kategori lain
+              untuk mengeksplorasi koleksi Photowerd!
+            </p>
           ) : (
             filtered.map((frame) => (
               <div key={frame.id} className="temp-card">
@@ -322,7 +326,7 @@ export default function TemplateList() {
                   <p className="temp-card-desc">{frame.description}</p>
                 </div>
                 <Link to="/photobooth" className="temp-card-btn">
-                  Coba Sekarang
+                  Gunakan Frame Ini
                 </Link>
               </div>
             ))
@@ -332,7 +336,7 @@ export default function TemplateList() {
         {/* CTA bottom */}
         <div className="temp-cta">
           <Link to="/photobooth" className="template-btn">
-            Buka Semua di Photobooth
+            Buka Studio Photowerd →
           </Link>
         </div>
       </div>

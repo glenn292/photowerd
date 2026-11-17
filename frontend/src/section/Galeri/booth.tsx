@@ -506,7 +506,7 @@ export default function Booth() {
   const [bgColor, setBgColor] = useState("#ffffff");
   const [pattern, setPattern] = useState("polos");
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
-  const [bottomText, setBottomText] = useState("Photobooth Moment ❤️");
+  const [bottomText, setBottomText] = useState("Photowerd Studio ✨");
   const [customOverlays, setCustomOverlays] = useState<CustomOverlay[]>([]);
   const [selectedOverlayId, setSelectedOverlayId] = useState<string | null>(
     null,
@@ -1212,7 +1212,7 @@ export default function Booth() {
           {/* Left: Camera view */}
           <div className="capture-left">
             <div className="capture-header">
-              <span className="capture-label">Ambil Foto (1×3)</span>
+              <span className="capture-label">Studio Photowerd (1×3)</span>
               <span className="capture-template-info">
                 Tata Letak: <strong>1 Kolom × 3 Foto</strong>
               </span>
@@ -1312,8 +1312,7 @@ export default function Booth() {
                 disabled={photos.length < totalNeeded}
                 onClick={handleContinue}
               >
-                Lanjut ke Pengaturan Frame & Stiker{" "}
-                <span className="btn-arrow">→</span>
+                Lanjut ke Studio Editor <span className="btn-arrow">→</span>
               </button>
               <button className="btn-outline" onClick={handleRetakeAll}>
                 ↻ Ulangi Semua Foto
@@ -1353,9 +1352,9 @@ export default function Booth() {
           {/* Header */}
           <div className="editor-header">
             <div>
-              <h2 className="editor-title">Editor Photobooth</h2>
+              <h2 className="editor-title">Photowerd Creative Studio</h2>
               <p className="editor-subtitle">
-                Atur Frame, Cahaya, Filter, dan Stiker sesukamu
+                Kreasikan Frame, Cahaya, Filter, dan Stiker sesukamu
               </p>
             </div>
             <span className="editor-selected-info">
@@ -1951,7 +1950,7 @@ export default function Booth() {
               className="bottom-text-input"
               value={bottomText}
               onChange={(e) => setBottomText(e.target.value)}
-              placeholder="Teks bawah strip foto..."
+              placeholder="Teks bawah strip Photowerd..."
             />
           </div>
 
@@ -1963,7 +1962,7 @@ export default function Booth() {
           )}
           <div className="editor-actions">
             <button className="btn-download" onClick={downloadStrip}>
-              Unduh Strip Foto <span className="btn-arrow">→</span>
+              Unduh Photostrip HD <span className="btn-arrow">→</span>
             </button>
           </div>
 

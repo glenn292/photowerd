@@ -1,21 +1,222 @@
-/* ── Hero Section ── */
+/* ============================================================
+   LUMINA STUDIO - CINEMATIC HERO SECTION
+   Editorial Atmosphere, Fluid Gradient Lighting & Luminous CTA
+   ============================================================ */
+
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 560px;
+  min-height: 640px;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: var(--bg-dark, #070913);
 }
 
+/* Background Slides with Slow Zoom Ken-Burns Effect */
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.06);
+  transition:
+    opacity 1.4s ease-in-out,
+    transform 8s ease-out;
+  z-index: 0;
+}
+
+.hero-bg-slide.active {
+  opacity: 0.85;
+  transform: scale(1);
+}
+
+/* Multilayered Cinematic Vignette & Ambient Studio Lighting */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 45%,
+      rgba(99, 102, 241, 0.22) 0%,
+      rgba(7, 9, 19, 0.65) 60%,
+      rgba(7, 9, 19, 0.96) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 9, 19, 0.5) 0%,
+      transparent 40%,
+      rgba(7, 9, 19, 0.98) 95%
+    );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Content Wrapper */
+.hero-content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 960px;
+  margin-top: -10px;
+}
+
+/* Ambient Backdrop Glow for Content */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.3) 0%,
+    rgba(236, 72, 153, 0.15) 50%,
+    transparent 70%
+  );
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambientGlowPulse 6s ease-in-out infinite;
+}
+
+/* Tagline Badge */
+.hero-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #c7d2fe;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+}
+
+/* Hero Heading */
+.hero-title {
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: clamp(2.8rem, 6.2vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f1f5f9 45%,
+    #c7d2fe 80%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 10px 30px rgba(99, 102, 241, 0.35));
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 650px;
+  margin-bottom: 34px;
+}
+
+/* CTA Pill Button */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-family: var(--font-main, "Plus Jakarta Sans", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  padding: 16px 38px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 12px 30px -4px rgba(99, 102, 241, 0.55),
+    0 0 25px rgba(236, 72, 153, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+/* Subtle Shimmer Overlay on Button */
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #ffffff !important;
+  box-shadow:
+    0 18px 40px -4px rgba(99, 102, 241, 0.7),
+    0 0 35px rgba(236, 72, 153, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.hero-btn:hover::before {
+  left: 100%;
+}
+
+.hero-btn-arrow {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-btn:hover .hero-btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Hero Scroll Down Indicator */
 .hero-scroll {
   position: absolute;
   bottom: 30px;
-  left: 80%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 
@@ -24,126 +225,91 @@
   align-items: center;
   gap: 10px;
 
-  color: #fafbfb;
+  color: #94a3b8;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.hero-scroll:hover {
   opacity: 1;
-  visibility: visible;
 }
 
 .hero-scroll span {
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: #94a3b8;
 }
 
 .scroll-line {
-  width: 1.5px;
-  height: 45px;
-  background-color: #dc2626;
-  animation: scrollAnim 1.5s ease-in-out infinite;
+  width: 2px;
+  height: 36px;
+  background: linear-gradient(to bottom, #6366f1, #ec4899, transparent);
+  border-radius: 9999px;
+  animation: heroScrollBead 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
-@keyframes scrollAnim {
+@keyframes heroScrollBead {
   0% {
     transform: scaleY(0);
     transform-origin: top;
+    opacity: 0;
   }
-
-  50% {
+  35% {
     transform: scaleY(1);
     transform-origin: top;
+    opacity: 1;
   }
-
-  50.1% {
+  65% {
     transform: scaleY(1);
     transform-origin: bottom;
+    opacity: 1;
   }
-
   100% {
     transform: scaleY(0);
     transform-origin: bottom;
+    opacity: 0;
   }
 }
 
-/* Background Slides */
-.hero-bg-slide {
-  position: absolute;
-  inset: 0;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-  z-index: 0;
+/* =========================================
+   RESPONSIVE HERO
+========================================= */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 26px;
+  }
+
+  .hero-btn {
+    padding: 14px 30px;
+    font-size: 12.5px;
+  }
+
+  .hero-scroll {
+    bottom: 20px;
+  }
 }
 
-.hero-bg-slide.active {
-  opacity: 1;
-}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
 
-/* Dark overlay */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 10, 10, 0.58);
-  z-index: 2;
-}
-
-/* Content wrapper — centered */
-.hero-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 24px;
-}
-
-/* Heading */
-.hero-title {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -0.01em;
-  color: #fafbfb;
-  margin-bottom: 36px;
-}
-
-/* CTA Button */
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #fafbfb;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #dc2626;
-  border: 1px solid #dc2626;
-  padding: 12px 28px;
-  border-radius: 0;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.hero-btn:hover {
-  background: #b91c1c;
-  border-color: #b91c1c;
-  color: #fafbfb;
-}
-
-.hero-btn-arrow {
-  font-size: 14px;
-  line-height: 1;
-  transition: transform 0.25s ease;
-}
-
-.hero-btn:hover .hero-btn-arrow {
-  transform: translateX(4px);
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+  }
 }

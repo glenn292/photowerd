@@ -1,32 +1,35 @@
-/* =========================================
-   INITIAL STATE
-========================================= */
+/* ============================================================
+   LUMINA STUDIO ANIMATIONS
+   Silky Spring Easing, Depth Scaling & Atmospheric Transitions
+   ============================================================ */
 
+/* Initial State */
 .anim-left,
 .anim-right,
 .anim-up,
 .anim-down {
   opacity: 0;
+  will-change: transform, opacity, filter;
 }
 
 /* =========================================
-   ANIMATION TRIGGER
+   ANIMATION TRIGGERS
 ========================================= */
 
 .is-visible .anim-left {
-  animation: fadeInLeftCustom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: luminaFadeLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .is-visible .anim-right {
-  animation: fadeInRightCustom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: luminaFadeRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .is-visible .anim-up {
-  animation: fadeInUpCustom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: luminaFadeUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .is-visible .anim-down {
-  animation: fadeInDownCustom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: luminaFadeDown 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* =========================================
@@ -34,95 +37,115 @@
 ========================================= */
 
 .delay-1 {
-  animation-delay: 0.2s !important;
+  animation-delay: 0.15s !important;
 }
 
 .delay-2 {
-  animation-delay: 0.4s !important;
+  animation-delay: 0.3s !important;
 }
 
 .delay-3 {
-  animation-delay: 0.6s !important;
+  animation-delay: 0.45s !important;
 }
 
 .delay-4 {
-  animation-delay: 0.8s !important;
+  animation-delay: 0.6s !important;
 }
 
 .delay-5 {
-  animation-delay: 1s !important;
+  animation-delay: 0.75s !important;
 }
 
 /* =========================================
-   KEYFRAMES
+   KEYFRAMES WITH DEPTH & SOFT BLUR
 ========================================= */
 
-@keyframes fadeInLeftCustom {
+@keyframes luminaFadeUp {
   0% {
     opacity: 0;
-    transform: translateX(-120px);
+    transform: translateY(40px) scale(0.98);
+    filter: blur(4px);
   }
-
-  45% {
-    opacity: 1;
-  }
-
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
-@keyframes fadeInRightCustom {
+@keyframes luminaFadeDown {
   0% {
     opacity: 0;
-    transform: translateX(120px);
+    transform: translateY(-40px) scale(0.98);
+    filter: blur(4px);
   }
-
-  35% {
-    opacity: 1;
-  }
-
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
-@keyframes fadeInUpCustom {
+@keyframes luminaFadeLeft {
   0% {
     opacity: 0;
-    transform: translateY(120px);
+    transform: translateX(-40px) scale(0.98);
+    filter: blur(4px);
   }
-
-  35% {
-    opacity: 1;
-  }
-
   100% {
     opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes luminaFadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Atmospheric Glow Pulse */
+@keyframes ambientGlowPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+/* Floating Elements */
+@keyframes floatGentle {
+  0%, 100% {
     transform: translateY(0);
   }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
-@keyframes fadeInDownCustom {
+/* Shimmer Sheen */
+@keyframes shimmerMove {
   0% {
-    opacity: 0;
-    transform: translateY(-120px);
+    background-position: -200% 0;
   }
-
-  35% {
-    opacity: 1;
-  }
-
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    background-position: 200% 0;
   }
 }
 
 /* =========================================
-   DISABLE ON MOBILE
+   RESPONSIVE HANDLING
 ========================================= */
 
 @media (max-width: 768px) {
@@ -133,6 +156,7 @@
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    filter: none !important;
     transition: none !important;
   }
 }
